@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 sample_data = pd.read_csv("freelance_jobs.csv")
 
 sample_data["experience"] = sample_data["experience"].str.lower().str.strip()
@@ -31,3 +32,15 @@ print("Most common category")
 print(sample_data["category"].value_counts().idxmax())
 print("Highest-paying fixed category:", fixed_summary["mean"].idxmax())
 print("Highest-paying hourly category:", hourly_summary["mean"].idxmax())
+fixed_std = fixed_df.groupby("category")["budget"].apply(lambda x : np.nanstd(x, ddof=1))
+hourly_std = hourly_df.groupby("category")["budget"].apply(lambda x : np.nanstd(x, ddof=1))
+print("Fixed budget std dev by category")
+print(fixed_std)
+print("Hourly budget std dev by category")
+print(hourly_std)
+fixed_median = fixed_df.groupby("category")["budget"].apply(lambda x: np.nanpercentile(x, 50))
+hourly_median = hourly_df.groupby("category")["budget"].apply(lambda x: np.nanpercentile(x, 50))
+print("Fixed median budget by category")
+print(fixed_median)
+print("Hourly median budget by category")
+print(hourly_median)
