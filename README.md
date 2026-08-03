@@ -27,7 +27,7 @@ script cleans the data and answers a few questions:
 
 ## Built with
 
-Python, pandas
+Python, Pandas, Numpy
 
 ## What I found
 
