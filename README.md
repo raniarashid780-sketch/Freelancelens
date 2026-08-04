@@ -27,7 +27,7 @@ script cleans the data and answers a few questions:
 
 ## Built with
 
-Python, Pandas, Numpy
+Python, pandas, NumPy, matplotlib
 
 ## What I found
 
@@ -36,6 +36,17 @@ Python, Pandas, Numpy
 - Highest-paying fixed-price category: Automation, ~$425 average (n=4)
 - Highest-paying hourly category: Data Analyst, ~$18.79/hr average (n=12)
 - Most common category: Data Analyst
+
+## Visualizations
+
+Four charts summarizing the analysis, saved as one figure:
+
+![FreelanceLens charts](freelancelens_charts.png)
+
+- Top 5 skills by frequency
+- Average budget by category (fixed-price jobs)
+- Average rate by category (hourly jobs)
+- Number of listings per category
 
 ## Author
 
